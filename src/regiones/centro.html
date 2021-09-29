@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <title>Centro</title>
+</head>
+
+<body>
+
+    <figure class="text-center mt-3 p-md-2">
+        <blockquote class="blockquote">
+          <p>Bienvenido, consulte las estadisticas de la Region Centro de Guatemala</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          <cite title="Source Title">Quejas</cite>
+        </figcaption>
+    </figure>
+
+    <div class="container my-5 text-center">
+        <div class="position-relative">
+            <div class="position-absolute top-0 start-0 translate-middle">
+                <a class="btn btn-primary" href="./index.html" role="button">Volver a Todas las regiones</a> 
+            </div>
+        </div>
+
+
+        <button class="btn btn-danger w-100" onclick="traer()">Obtener quejas</button>
+        <br/>
+        <br/>
+        <div class="alert alert-info" role="alert" id="total"></div>
+        <div class="mt-5">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Comercio</th>
+                        <th scope="col">Departamento</th>
+                        <th scope="col">Municipio</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Direccion</th>
+                        <th scope="col">Queja</th>
+
+                    </tr>
+                </thead>
+                <tbody id="contenido">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="centro.js"></script>
+
+</body>
+
+</html>

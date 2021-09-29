@@ -1,26 +1,36 @@
-var contenido = document.querySelector('#contenido')
-var total = document.querySelector('#total')
 
-function traer() {
+function valorSeleccionado(){
 
-    const url = "https://backend-estadisticas-quejas.herokuapp.com/region/3";
+    var select = document.getElementById('depart');
+    var value = select.options[select.selectedIndex].value;
+    console.log(value); // en
+    traer(value)
+}
+
+
+
+function traer(idDepartamento) {
+
+    const url = `https://backend-estadisticas-quejas.herokuapp.com/departamento/${idDepartamento}`;
 
     fetch(url)
         .then(res => res.json())
         .then(datos => {
-            
+            console.log(datos);
             tabla(datos)
         })
 }
 
 function tabla(datos) {
+    
 
     const longitu = datos.length
-  
+
     contenido.innerHTML = '';
-    total.innerHTML = `Total de quejas en Region Sur: ${longitu}`;
+    total.innerHTML = `Total de quejas: ${longitu}`;
 
     for(let valor of datos){
+        
         
         contenido.innerHTML += `
         

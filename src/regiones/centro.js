@@ -8,22 +8,22 @@ function traer() {
     fetch(url)
         .then(res => res.json())
         .then(datos => {
-            console.log(datos)
+
             tabla(datos)
         })
 }
 
 function tabla(datos) {
-    // console.log(datos)
+    
 
     const longitu = datos.length
-    console.log(longitu);
 
     contenido.innerHTML = '';
     total.innerHTML = `Total de quejas en Region Centro: ${longitu}`;
 
     for(let valor of datos){
-        // console.log(valor.nombre)
+        
+        
         contenido.innerHTML += `
         
         <tr>

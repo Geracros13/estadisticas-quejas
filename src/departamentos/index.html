@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <title>Departamnetos</title>
+</head>
+
+<body>
+
+
+    <figure class="text-center mt-3 p-md-2">
+        <blockquote class="blockquote">
+          <p>Bienvenido, consulte las estadisticas de las  Departamentos de Guatemala</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          <cite title="Source Title">Quejas</cite>
+        </figcaption>
+    </figure>
+
+    <div class="position-relative">
+        <div class="position-absolute top-0 start-0 translate-middle">
+            <a class="btn btn-primary ml-2" href="../../index.html" role="button">Inicio</a> 
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+
+  
+    <div class="container text-center">
+      Seleccione un Departamento
+      <select name="depart" id="depart" class="dropdown" onchange="valorSeleccionado()">
+        <option value="1">Alta Verapaz</option>
+        <option value="2">Baja Verapaz</option>
+        <option value="3">Petén</option>
+        <option value="4">Chimaltenango</option>
+        <option value="5">Sacatepéquez</option>
+        <option value="6">Escuintla</option>
+        <option value="7">Guatemala</option>
+        <option value="8">Izabal</option>
+        <option value="9">Chiquimula</option>
+        <option value="10">Zacapa</option>
+        <option value="11">El progreso</option>
+        <option value="12">Jutiapa</option>
+        <option value="13">Jalapa</option>
+        <option value="14">Santa Rosa</option>
+        <option value="15">San Marcos</option>
+        <option value="16">Quetzaltenango</option>
+        <option value="17">Totonicapán</option>
+        <option value="18">Sololá</option>
+        <option value="19">Retalhuleu</option>
+        <option value="20">Suchitepéquez</option>
+        <option value="21">Huehuetenango</option>
+        <option value="22">Quiché</option>
+      </select>
+    </div>
+
+    <div class="container my-5 text-center">
+
+      <br/>
+      <br/>
+      <div class="alert alert-info" role="alert" id="total"></div>
+      <div class="mt-5">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th scope="col">Comercio</th>
+                      <th scope="col">Departamento</th>
+                      <th scope="col">Municipio</th>
+                      <th scope="col">Fecha</th>
+                      <th scope="col">Direccion</th>
+                      <th scope="col">Queja</th>
+
+                  </tr>
+              </thead>
+              <tbody id="contenido">
+                  
+              </tbody>
+          </table>
+      </div>
+  </div>
+
+</body>
+
+<script type="text/javascript" src="./departamentos.js"></script>
+
+
+</html>

@@ -1,7 +1,7 @@
 
 function valorSeleccionado(){
 
-    var select = document.getElementById('depart');
+    var select = document.getElementById('comercio');
     var value = select.options[select.selectedIndex].value;
 
     traer(value)
@@ -9,9 +9,9 @@ function valorSeleccionado(){
 
 
 
-function traer(idDepartamento) {
+function traer(idComercio) {
 
-    const url = `https://backend-estadisticas-quejas.herokuapp.com/departamento/${idDepartamento}`;
+    const url = `https://backend-estadisticas-quejas.herokuapp.com/comercio/${idComercio}`;
 
     fetch(url)
         .then(res => res.json())
@@ -35,8 +35,7 @@ function tabla(datos) {
         contenido.innerHTML += `
         
         <tr>
-            <th scope="row">${ valor.comercioNombre }</th>
-            <td>${ valor.deptoNombre }</td>
+            <th scope="row">${ valor.deptoNombre }</th>
             <td>${ valor.municipioNombre }</td>
             <td>${ valor.quejaFecha}</td>
             <td>${ valor.sucursalDireccion}</td>
